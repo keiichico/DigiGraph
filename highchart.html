@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Chart reflow is set to true'
+        },
+
+        subtitle: {
+            text: 'When resizing the window or the frame, the chart should resize'
+        },
+        
+        
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        
+        series: [{
+                name: 'Point 1',
+                color: '#00FF00',
+                data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]        
+            },{
+                name: 'Point 2',
+                color: '#FF0000',
+                data: [19.9, 61.5, 96.4, 119.2, 124.0, 136.0, 115.6, 128.5, 196.4, 174.1, 85.6, 44.4]
+            }]
+    });
+});
+
+		</script>
+	</head>
+	<body>
+<script src="lib/highchart/js/highcharts.js"></script>
+<script src="lib/highchart/js/highcharts-more.js"></script>
+<script src="lib/highchart/js/modules/exporting.js"></script>
+
+<div id="container" style="height: 600px; min-width: 610px; max-width: 900px; margin: 0 auto"></div>
+	</body>
+</html>
